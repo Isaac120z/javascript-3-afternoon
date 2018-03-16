@@ -20,15 +20,15 @@
 // } 
 
 // for(var key in values) {
-//   console.log(values[key])
+// console.log(values[key])
 // }
 
-/*
-  In this next example, we are accessing the property names themselves. Uncomment the code below, run it and look at what prints in the console.
-*/
+// /*
+//   In this next example, we are accessing the property names themselves. Uncomment the code below, run it and look at what prints in the console.
+// */
 
 // for(var key in values) {
-//   console.log(key)
+// console.log(key)
 // }
 
 
@@ -40,8 +40,13 @@
 */
 
 function showValues( obj ) {
-  //Code Here
-}
+  var outString = "";
+  for(var key in obj){
+   outString = outString + obj[key]; 
+  }
+  return(outString);
+}    
+
 
 
 
@@ -53,7 +58,13 @@ function showValues( obj ) {
   Return the updated object.
 */
 
-//Code Here
+function greaterThan10(obj){
+  for (var key in obj){
+    if (obj[key] > 10){
+     obj[key] = 0;
+    }
+  }return obj;
+}
 
 
 
